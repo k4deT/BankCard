@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="form">
+            <div class="bank_card">
+                <h2 class="first_text">Оплата банковской картой</h2>
+                <p class="text_underNumber">Номер карты</p>
+                <input class="card_number" id="cardNumber" type="text" placeholder="От 16 до 19 цифр"
+                oninput="if(parseInt(this.value) === 0) this.value = '';" 
+                maxlength="24" 
+                required>
+
+                <p class="text_underName">Имя владельца</p>
+                <input class="card_name" id="input2" type="text" placeholder="Фамилия и имя" maxlength="25" 
+                onkeypress="return (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || event.charCode === 46 || event.charCode === 32"
+                oninput="this.value = this.value.toUpperCase();" 
+                required>
+
+                <div class="text_dateAndCVC">
+                    <p class="text_date">Срок действия</p>
+                    <p class="text_cvc">CVV / CVC</p> 
+                </div>
+                <div class="dateAndCVC">
+                    <input class="card_date" type="text" id="expiryDate" placeholder="мм/гг" maxlength="5" 
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57" 
+                    required>  
+
+                    <input class="card_cvc" type="password" placeholder="3 цифры" maxlength="3" 
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57" 
+                    required>
+
+                </div>
+                <a class="btn_payment" href="#">Оплатить</a>
+            </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

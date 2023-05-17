@@ -1,0 +1,175 @@
+body {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    background: 
+    url("../image/bg.jpg") center 
+    no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;  
+}
+
+* p {
+    margin: 0 auto;
+}
+
+/* Наружняя форма */
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    background-color: #35393f52;
+    width: 700px;
+    height: 650px;
+    border: 1px;
+    border-radius: 15px;
+}
+
+
+/* Форма банковской карты */
+.bank_card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: #fff;
+    width: 480px;
+    height: 500px;
+}
+
+.first_text {
+    text-align: center;
+    font-weight: 500;
+}
+
+/* инпут для ввода имени владельца */
+.text_underName {
+    margin-top: 20px;
+}
+
+.card_name {
+    margin: 10px 20px 20px 20px;
+    align-items: center;
+    background-color: #f2f3f5;
+    border: 1px solid #d7d8d9;
+    border-radius: 7px;
+    width: 430px;
+    height: 40px;
+    font-size: 16px;
+    padding-left: 10px;
+    /* text-transform: uppercase; */
+}
+
+/* инпут для ввода номера карты */
+.text_underNumber {
+    margin-top: 20px;
+}
+
+.card_number {
+    margin: 10px 20px 20px 20px;
+    align-items: center;
+    background-color: #f2f3f5;
+    border: 1px solid #d7d8d9;
+    border-radius: 7px;
+    width: 430px;
+    height: 40px;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+/* текст над вводом даты и cvc */
+.text_dateAndCVC {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.text_date {
+    margin-left: -150px;
+    margin-right: 140px;
+}
+
+.text_cvc {
+    margin-right: -140px;
+}
+
+* .text_date,
+* .text_cvc, 
+* .text_underNumber,
+* .text_underName {
+    color: #6a6c6e;
+}
+
+/* инпут для ввода даты и cvc */
+.dateAndCVC {
+    display: flex;
+    flex-direction: row;
+}
+
+.card_date, 
+.card_cvc {
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #f2f3f5;
+    border: 1px solid #d7d8d9;
+    border-radius: 7px;
+    width: 190px;
+    height: 40px;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+* .card_number::placeholder,
+* .card_date::placeholder,
+* .card_cvc::placeholder,
+* .card_name::placeholder {
+    color: #abafb4;
+    font-size: 16px;
+}
+
+* .card_number:focus,
+* .card_date:focus,
+* .card_cvc:focus,
+* .card_name:focus {
+    border: 1px solid blue;
+    outline-offset: 0px;
+    outline: none;
+    box-shadow: 0 0 3px #1670BE;
+}
+
+.card_date {
+    margin-right: 30px;
+} 
+
+/* кнопка ОПЛАТИТЬ */
+.btn_payment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    width: 440px;
+    height: 40px;
+    background-color: #5181b8; 
+    border: none; 
+    border-radius: 7px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff; 
+    /* margin-bottom: 20px; */
+
+    transition: background .1s
+    linear;
+}
+
+.btn_payment:hover {
+    background-color: #4977aa;
+}
+
+/* убирает скролл на странице */
+::-webkit-scrollbar {
+    width: 0;
+}
